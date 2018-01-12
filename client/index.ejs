@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>1955</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
-    <% for(var user of users){%>
-        <div>
-            <%= user.name%>
+    <div class="container"><br>
+        <div class="jumbotron">
+            <h1>Instructions:</h1>
+            <p>1. To add a new user, type '/new/USERNAME/' ie. '/new/brian'</p>
+            <p>2. To remove a user, type '/remove/USERNAME/' ie. '/remove/brian'</p>
+            <p>3. To see a single user, type '/USERNAME/' ie. '/brian'</p>
         </div>
-    <% }%>
+        <div class="display container">
+            <h1>All users:</h1>
+            <% for(var user of users){%>
+                <div class="container">
+                    <p>Name: <%= user.name%></p>
+                </div>
+                <% }%>
+        </div>
+    </div>
 </body>
 </html>
